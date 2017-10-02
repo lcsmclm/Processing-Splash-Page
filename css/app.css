@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@font-face{
+	font-family: "Light";
+	src:url(../includes/fonts/SourceSansPro-Light.ttf);
+}
+@font-face{
+	font-family: "Regular";
+	src:url(../includes/fonts/SourceSansPro-Regular.ttf);
+}
+@font-face{
+	font-family: "Italic";
+	src:url(../includes/fonts/SourceSansPro-Italic.ttf);
+}
+@font-face{
+	font-family: "Semi";
+	src:url(../includes/fonts/SourceSansPro-Semibold.ttf);
+}
+@font-face{
+	font-family: "Bold";
+	src:url(../includes/fonts/SourceSansPro-Bold.ttf);
+}
+@font-face{
+	font-family: "Black";
+	src:url(../includes/fonts/SourceSansPro-Black.ttf);
+}
+html, body {
+position: relative;
+margin: 0;
+padding: 0;
+overflow: hidden;
+font-family: "Regular", Helvetica, Arial, Courier;
+background-color: #fff;
+}
+
+.hidden
+{
+position:absolute !important;
+left:-1000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+canvas{
+	outline: 0;
+	width: 100%;
+	min-height: 900px;
+	height: 100vh;
+	z-index: 0 !important;
+	position: relative;
+	right: 0;
+	top: 0;
+}
+.company-header{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1 !important;
+	padding: 1%;
+}
+.company-header h1{
+	font-size: 4rem;
+	padding: 0;
+	margin: 0;
+	font-family: "Bold";
+	animation-name: slideIn;
+    animation-duration: 1.5s;
+	animation-delay: 0.3s;
+	animation-fill-mode: forwards;  
+	position: relative;
+	right: 800px;
+	opacity: 0.0;
+}
+.company-header p{
+	padding: 0;
+	margin: 0;
+	font-size: 2rem;
+	font-family: "Regular";
+	animation-name: fadeIn;
+    animation-duration: 1.5s;
+	animation-delay: 1.6s;
+	animation-fill-mode: forwards;  
+	position: relative;
+	opacity: 0.0;
+}
+@keyframes slideIn {
+    0%   {right:800px; opacity: 0.0;}
+    100% {right:0px; opacity: 1.0;}
+}
+@keyframes fadeIn {
+    0%   {opacity: 0.0;}
+    100% {opacity: 1.0;}
+}
+
+@media screen and (min-width: 20em) {
+
+}
+
+@media screen and (min-width: 40em) {
+.company-header{
+	padding: 10%;
+}
+.company-header h1{
+	font-size: 7rem;
+	padding: 0;
+	margin: 0;
+	font-family: "Bold";
+}
+.company-header p{
+	padding: 0;
+	margin: 0;
+	font-size: 2.5rem;
+	font-family: "Regular";
+}
+}
+
+@media screen and (min-width: 64em) {
+
+}
